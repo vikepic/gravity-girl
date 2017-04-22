@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 25a155977007caa4aab2bfaff4ccbb93
-timeCreated: 1492868073
+timeCreated: 1492885353
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -55,6 +55,68 @@ TextureImporter:
     21300096: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_48
     21300098: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_49
     21300100: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_50
+    21300102: tiles_8x8_0
+    21300104: tiles_8x8_1
+    21300106: tiles_8x8_2
+    21300108: tiles_8x8_3
+    21300110: tiles_8x8_4
+    21300112: tiles_8x8_5
+    21300114: tiles_8x8_6
+    21300116: tiles_8x8_7
+    21300118: tiles_8x8_8
+    21300120: tiles_8x8_9
+    21300122: tiles_8x8_10
+    21300124: tiles_8x8_11
+    21300126: tiles_8x8_12
+    21300128: tiles_8x8_13
+    21300130: tiles_8x8_14
+    21300132: tiles_8x8_15
+    21300134: tiles_8x8_16
+    21300136: tiles_8x8_17
+    21300138: tiles_8x8_18
+    21300140: tiles_8x8_19
+    21300142: tiles_8x8_20
+    21300144: tiles_8x8_21
+    21300146: tiles_8x8_22
+    21300148: tiles_8x8_23
+    21300150: tiles_8x8_24
+    21300152: tiles_8x8_25
+    21300154: tiles_8x8_26
+    21300156: tiles_8x8_27
+    21300158: tiles_8x8_28
+    21300160: tiles_8x8_29
+    21300162: tiles_8x8_30
+    21300164: tiles_8x8_31
+    21300166: tiles_8x8_32
+    21300168: tiles_8x8_33
+    21300170: tiles_8x8_34
+    21300172: tiles_8x8_35
+    21300174: tiles_8x8_36
+    21300176: tiles_8x8_37
+    21300178: tiles_8x8_38
+    21300180: tiles_8x8_39
+    21300182: tiles_8x8_40
+    21300184: tiles_8x8_41
+    21300186: tiles_8x8_42
+    21300188: tiles_8x8_43
+    21300190: tiles_8x8_44
+    21300192: tiles_8x8_45
+    21300194: tiles_8x8_46
+    21300196: tiles_8x8_47
+    21300198: tiles_8x8_48
+    21300200: tiles_8x8_49
+    21300202: tiles_8x8_50
+    21300204: tiles_8x8_51
+    21300206: tiles_8x8_52
+    21300208: tiles_8x8_53
+    21300210: tiles_8x8_54
+    21300212: tiles_8x8_55
+    21300214: tiles_8x8_56
+    21300216: tiles_8x8_57
+    21300218: tiles_8x8_58
+    21300220: tiles_8x8_59
+    21300222: tiles_8x8_60
+    21300224: tiles_8x8_61
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -145,20 +207,20 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_0
+      name: tiles_8x8_0
       rect:
         serializedVersion: 2
         x: 0
         y: 56
         width: 8
         height: 8
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_1
+      name: tiles_8x8_1
       rect:
         serializedVersion: 2
         x: 8
@@ -166,90 +228,90 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_2
+      name: tiles_8x8_2
       rect:
         serializedVersion: 2
         x: 16
         y: 56
         width: 8
         height: 8
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_3
+      name: tiles_8x8_3
       rect:
         serializedVersion: 2
         x: 24
         y: 56
         width: 8
         height: 8
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_4
+      name: tiles_8x8_4
       rect:
         serializedVersion: 2
         x: 32
         y: 56
         width: 8
         height: 8
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_5
+      name: tiles_8x8_5
       rect:
         serializedVersion: 2
         x: 40
         y: 56
         width: 8
         height: 8
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_6
+      name: tiles_8x8_6
       rect:
         serializedVersion: 2
         x: 48
         y: 56
         width: 8
         height: 8
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_7
+      name: tiles_8x8_7
       rect:
         serializedVersion: 2
         x: 56
         y: 56
         width: 8
         height: 8
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_8
+      name: tiles_8x8_8
       rect:
         serializedVersion: 2
         x: 0
@@ -257,77 +319,51 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_9
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 48
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_10
+      name: tiles_8x8_9
       rect:
         serializedVersion: 2
         x: 16
         y: 48
         width: 8
         height: 8
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_11
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 48
-        width: 8
-        height: 8
-      alignment: 1
-      pivot: {x: 0, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_12
+      name: tiles_8x8_10
       rect:
         serializedVersion: 2
         x: 32
         y: 48
         width: 8
         height: 8
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_13
+      name: tiles_8x8_11
       rect:
         serializedVersion: 2
         x: 40
         y: 48
         width: 8
         height: 8
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_14
+      name: tiles_8x8_12
       rect:
         serializedVersion: 2
         x: 48
@@ -335,25 +371,25 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_15
+      name: tiles_8x8_13
       rect:
         serializedVersion: 2
         x: 56
         y: 48
         width: 8
         height: 8
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_16
+      name: tiles_8x8_14
       rect:
         serializedVersion: 2
         x: 0
@@ -361,12 +397,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_17
+      name: tiles_8x8_15
       rect:
         serializedVersion: 2
         x: 8
@@ -374,90 +410,90 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_18
+      name: tiles_8x8_16
       rect:
         serializedVersion: 2
         x: 16
         y: 40
         width: 8
         height: 8
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_19
+      name: tiles_8x8_17
       rect:
         serializedVersion: 2
         x: 24
         y: 40
         width: 8
         height: 8
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_20
+      name: tiles_8x8_18
       rect:
         serializedVersion: 2
         x: 32
         y: 40
         width: 8
         height: 8
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_21
+      name: tiles_8x8_19
       rect:
         serializedVersion: 2
         x: 40
         y: 40
         width: 8
         height: 8
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_22
+      name: tiles_8x8_20
       rect:
         serializedVersion: 2
         x: 48
         y: 40
         width: 8
         height: 8
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_23
+      name: tiles_8x8_21
       rect:
         serializedVersion: 2
         x: 56
         y: 40
         width: 8
         height: 8
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_24
+      name: tiles_8x8_22
       rect:
         serializedVersion: 2
         x: 0
@@ -465,12 +501,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_25
+      name: tiles_8x8_23
       rect:
         serializedVersion: 2
         x: 8
@@ -478,12 +514,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_26
+      name: tiles_8x8_24
       rect:
         serializedVersion: 2
         x: 16
@@ -491,12 +527,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_27
+      name: tiles_8x8_25
       rect:
         serializedVersion: 2
         x: 24
@@ -504,12 +540,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_28
+      name: tiles_8x8_26
       rect:
         serializedVersion: 2
         x: 32
@@ -517,12 +553,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_29
+      name: tiles_8x8_27
       rect:
         serializedVersion: 2
         x: 40
@@ -530,12 +566,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_30
+      name: tiles_8x8_28
       rect:
         serializedVersion: 2
         x: 48
@@ -543,12 +579,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_31
+      name: tiles_8x8_29
       rect:
         serializedVersion: 2
         x: 56
@@ -556,12 +592,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_32
+      name: tiles_8x8_30
       rect:
         serializedVersion: 2
         x: 0
@@ -569,12 +605,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_33
+      name: tiles_8x8_31
       rect:
         serializedVersion: 2
         x: 8
@@ -582,12 +618,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_34
+      name: tiles_8x8_32
       rect:
         serializedVersion: 2
         x: 16
@@ -595,12 +631,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_35
+      name: tiles_8x8_33
       rect:
         serializedVersion: 2
         x: 24
@@ -608,12 +644,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_36
+      name: tiles_8x8_34
       rect:
         serializedVersion: 2
         x: 32
@@ -621,12 +657,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_37
+      name: tiles_8x8_35
       rect:
         serializedVersion: 2
         x: 40
@@ -634,12 +670,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_38
+      name: tiles_8x8_36
       rect:
         serializedVersion: 2
         x: 48
@@ -647,12 +683,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_39
+      name: tiles_8x8_37
       rect:
         serializedVersion: 2
         x: 56
@@ -660,12 +696,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_40
+      name: tiles_8x8_38
       rect:
         serializedVersion: 2
         x: 0
@@ -673,12 +709,25 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_41
+      name: tiles_8x8_39
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tiles_8x8_40
       rect:
         serializedVersion: 2
         x: 16
@@ -686,12 +735,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_42
+      name: tiles_8x8_41
       rect:
         serializedVersion: 2
         x: 24
@@ -699,12 +748,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_43
+      name: tiles_8x8_42
       rect:
         serializedVersion: 2
         x: 32
@@ -712,12 +761,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_44
+      name: tiles_8x8_43
       rect:
         serializedVersion: 2
         x: 40
@@ -725,12 +774,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_45
+      name: tiles_8x8_44
       rect:
         serializedVersion: 2
         x: 48
@@ -738,12 +787,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_46
+      name: tiles_8x8_45
       rect:
         serializedVersion: 2
         x: 56
@@ -751,12 +800,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_47
+      name: tiles_8x8_46
       rect:
         serializedVersion: 2
         x: 0
@@ -764,12 +813,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_48
+      name: tiles_8x8_47
       rect:
         serializedVersion: 2
         x: 8
@@ -777,12 +826,90 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_49
+      name: tiles_8x8_48
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tiles_8x8_49
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tiles_8x8_50
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tiles_8x8_51
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tiles_8x8_52
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tiles_8x8_53
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tiles_8x8_54
       rect:
         serializedVersion: 2
         x: 0
@@ -790,12 +917,12 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^51F080CA4639055CB559B72B559B2160966D1639DAEA45AD11^pimgpsh_fullsize_distr_50
+      name: tiles_8x8_55
       rect:
         serializedVersion: 2
         x: 8
@@ -803,7 +930,85 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tiles_8x8_56
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tiles_8x8_57
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tiles_8x8_58
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tiles_8x8_59
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tiles_8x8_60
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tiles_8x8_61
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

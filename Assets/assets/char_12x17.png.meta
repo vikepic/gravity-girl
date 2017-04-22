@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 20af0e45cc1b3a244b5f07b65de475f9
-timeCreated: 1492867770
+timeCreated: 1492885565
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -14,6 +14,13 @@ TextureImporter:
     21300014: ^DF7B6908333950943377022E43DE64862AA00E854334B01C41^pimgpsh_fullsize_distr_7
     21300016: ^DF7B6908333950943377022E43DE64862AA00E854334B01C41^pimgpsh_fullsize_distr_8
     21300018: ^DF7B6908333950943377022E43DE64862AA00E854334B01C41^pimgpsh_fullsize_distr_9
+    21300020: char_12x17_0
+    21300022: char_12x17_1
+    21300024: char_12x17_2
+    21300026: char_12x17_3
+    21300028: char_12x17_4
+    21300030: char_12x17_5
+    21300032: char_12x17_6
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -104,7 +111,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ^DF7B6908333950943377022E43DE64862AA00E854334B01C41^pimgpsh_fullsize_distr_0
+      name: char_12x17_0
       rect:
         serializedVersion: 2
         x: 0
@@ -117,7 +124,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^DF7B6908333950943377022E43DE64862AA00E854334B01C41^pimgpsh_fullsize_distr_1
+      name: char_12x17_1
       rect:
         serializedVersion: 2
         x: 12
@@ -130,12 +137,12 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^DF7B6908333950943377022E43DE64862AA00E854334B01C41^pimgpsh_fullsize_distr_2
+      name: char_12x17_2
       rect:
         serializedVersion: 2
         x: 24
         y: 47
-        width: 13
+        width: 14
         height: 17
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -143,7 +150,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^DF7B6908333950943377022E43DE64862AA00E854334B01C41^pimgpsh_fullsize_distr_3
+      name: char_12x17_3
       rect:
         serializedVersion: 2
         x: 38
@@ -156,7 +163,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^DF7B6908333950943377022E43DE64862AA00E854334B01C41^pimgpsh_fullsize_distr_4
+      name: char_12x17_4
       rect:
         serializedVersion: 2
         x: 51
@@ -169,67 +176,28 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^DF7B6908333950943377022E43DE64862AA00E854334B01C41^pimgpsh_fullsize_distr_5
+      name: char_12x17_5
       rect:
         serializedVersion: 2
         x: 0
         y: 30
-        width: 12
+        width: 16
         height: 17
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ^DF7B6908333950943377022E43DE64862AA00E854334B01C41^pimgpsh_fullsize_distr_6
+      name: char_12x17_6
       rect:
         serializedVersion: 2
-        x: 12
+        x: 16
         y: 30
         width: 12
         height: 17
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ^DF7B6908333950943377022E43DE64862AA00E854334B01C41^pimgpsh_fullsize_distr_7
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 30
-        width: 12
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ^DF7B6908333950943377022E43DE64862AA00E854334B01C41^pimgpsh_fullsize_distr_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 13
-        width: 12
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ^DF7B6908333950943377022E43DE64862AA00E854334B01C41^pimgpsh_fullsize_distr_9
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 13
-        width: 12
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
