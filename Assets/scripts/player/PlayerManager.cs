@@ -75,6 +75,14 @@ public class PlayerManager : MonoBehaviour {
         ChangeState(PlayerState.Flying);
     }
 
+    public void EnterPlanet()
+    {
+        //TODO position is hardcoded
+        transform.position = Vector3.zero;
+        transform.rotation = Quaternion.identity;
+        ChangeState(PlayerState.Platformer);
+    }
+
     void Start () {
         stateControllers = new StateController[3];
         stateControllers[(int)PlayerState.Flying] = 

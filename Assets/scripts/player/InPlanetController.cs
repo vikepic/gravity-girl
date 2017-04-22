@@ -38,8 +38,16 @@ public class InPlanetController : StateController
             return;
         }
 
+        if (Input.GetKey(KeyCode.K))
+        {
+            // This gets us outside this state
+            gameObject.SendMessage("EnterPlanet");
+            pivotController.FreeEntity(gameObject);
+            return;
+        }
 
-        if(Input.GetAxis("Horizontal") != 0)
+
+        if (Input.GetAxis("Horizontal") != 0)
         {
             pivotController.Rotate(rotationSpeed *
                 -Input.GetAxis("Horizontal"));

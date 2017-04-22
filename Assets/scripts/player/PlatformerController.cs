@@ -10,6 +10,8 @@ public class PlatformerController : StateController
     Rigidbody2D myRb;
     [SerializeField]
     GameObject groundP, stairCollider, suit, suitPref;
+    [SerializeField]
+    GameObject playerPlatformer;
 
     private bool canJump = true;
     public  bool faceRight = true;
@@ -19,12 +21,17 @@ public class PlatformerController : StateController
     private bool suitOn = true;
     private bool suitInRange = false;
     private GameObject suitCurrent;
-    // Use this for initialization
-    void Start () {
 
-	}
-	
-	// Update is called once per frame
+    private void OnDisable()
+    {
+        playerPlatformer.SetActive(false);
+    }
+
+    private void OnEnable()
+    {
+        playerPlatformer.SetActive(true);
+    }
+
 	void Update () {
         grounded = checkGround();
         if(!suitOn)myRb.velocity = new Vector2(Input.GetAxis("Horizontal")*speed, myRb.velocity.y);
