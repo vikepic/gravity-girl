@@ -41,7 +41,11 @@ public class Gravity2D : MonoBehaviour {
 		{
 			if(c.GetComponent<Rigidbody2D>() != null)
 			{
-				objectsInRange.Add(c.GetComponent<Rigidbody2D>());
+                if (!objectsInRange.Contains(c.GetComponent<Rigidbody2D>()))
+                {
+                    objectsInRange.Add(c.GetComponent<Rigidbody2D>());
+                    Debug.Log("Gravity2D: object " + c.gameObject.name + "entered the radius");
+                }
 			}
 			else
 			{
@@ -57,6 +61,8 @@ public class Gravity2D : MonoBehaviour {
 			if(c.GetComponent<Rigidbody2D>() != null)
 			{
 				objectsInRange.Remove(c.GetComponent<Rigidbody2D>());
+                //Debug.Log("Gravity2D: " + c.gameObject.name + " exited the radius of " +
+                //    gameObject.name);
 			}
 		}
 	}
@@ -67,6 +73,11 @@ public class Gravity2D : MonoBehaviour {
 		Vector2 forceDirection;
 		foreach(Rigidbody2D a in objectsInRange)
 		{
+            if (!a.gameObject.activeSelf)
+            {
+                continue;
+            }
+            //Debug.Log("Adding force to " + a.gameObject.name);
 			forceMultiplier = (-strength / Mathf.Pow(Mathf.Max(Vector3.Distance(_transform.position,a.transform.position),1f),strengthExponent));
 			if(scaleStrengthOnMass)
 			{
@@ -80,7 +91,8 @@ public class Gravity2D : MonoBehaviour {
 				forceMultiplier *= -1;
 			}
 			forceDirection = (a.transform.position - _transform.position).normalized;
-			a.AddForce(forceDirection * forceMultiplier);
+            //Debug.Log(Time.time + ": " +  forceMultiplier);
+            a.AddForce(forceDirection * forceMultiplier);
 		}
 	}
 }
