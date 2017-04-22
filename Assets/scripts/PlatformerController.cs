@@ -12,6 +12,7 @@ public class PlatformerController : StateController
     GameObject groundP, stairCollider;
 
     private bool canJump = true;
+    public  bool faceRight = true;
     private bool canDis = true;
     private bool stairs = false;
     private bool grounded = false;
@@ -24,6 +25,8 @@ public class PlatformerController : StateController
 	void Update () {
         grounded = checkGround();
         myRb.velocity = new Vector2(Input.GetAxis("Horizontal")*speed, myRb.velocity.y);
+        if (myRb.velocity.x > 0 && !faceRight) flip();
+        else if (myRb.velocity.x < 0 && faceRight) flip();
         if(Input.GetKeyDown(KeyCode.Space) && canJump)
         {
             canJump = false;
@@ -46,6 +49,12 @@ public class PlatformerController : StateController
             canDis = false;
             StartCoroutine(disableStairCol());
         }
+    }
+
+    public void flip()
+    {
+        faceRight = !faceRight;
+        transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
     }
 
     IEnumerator enableJump()
