@@ -63,6 +63,18 @@ public class PlayerManager : MonoBehaviour {
         }
     }
 
+    public void OnPlanetCollision(GameObject planetPivot)
+    {
+        ChangeState(PlayerState.InPlanet);
+        stateControllers[(int)PlayerState.InPlanet].SendMessage(
+            "ResetPivot", planetPivot);
+    }
+
+    public void ExitPlanet()
+    {
+        ChangeState(PlayerState.Flying);
+    }
+
     void Start () {
         stateControllers = new StateController[3];
         stateControllers[(int)PlayerState.Flying] = 
@@ -72,6 +84,6 @@ public class PlayerManager : MonoBehaviour {
         stateControllers[(int)PlayerState.Platformer] =
             gameObject.GetComponent<PlatformerController>();
 
-        CurrentState = PlayerState.Platformer;
+        CurrentState = PlayerState.Flying;
 	}
 }
