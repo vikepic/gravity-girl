@@ -17,7 +17,6 @@ public class Button : MonoBehaviour {
 
     void OnTriggerStay2D(Collider2D other)
     {
-        Debug.Log(other.tag);
         if (other.tag == "Player" || other.tag == "suit")
         {
             for (int i = 0; i < targetWallScript.Length; i++)

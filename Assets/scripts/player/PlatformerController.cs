@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlatformerController : StateController
 {
     [SerializeField]
-    float speed, jumpF, stairSpeed, suitMultiplier;
+    float speed, jumpF, stairSpeed, suitMultiplier, suitJumpMult;
     [SerializeField]
     Rigidbody2D myRb;
     [SerializeField]
@@ -73,6 +73,14 @@ public class PlatformerController : StateController
             else myRb.AddForce(Vector2.up * jumpF * suitMultiplier, ForceMode2D.Impulse);
             StartCoroutine(enableJump());
         }
+        if (!grounded && Input.GetKeyDown(KeyCode.W) && suitOn)
+        {
+            myRb.AddForce(Vector2.up * jumpF * suitJumpMult, ForceMode2D.Impulse);
+            StartCoroutine(enableJump());
+            suitOn = false;
+            suit.SetActive(false);
+            suitCurrent = Instantiate(suitPref, transform.position, Quaternion.identity);
+        }
         if ( (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) && stairs)
         {
             if (!suitOn) myRb.velocity = new Vector2(0, stairSpeed);
@@ -86,7 +94,6 @@ public class PlatformerController : StateController
         }
         if (Input.GetKeyDown(KeyCode.O) && suitOn)
         {
-
             suitOn = false;
             suit.SetActive(false);
             suitCurrent = Instantiate(suitPref, transform.position, Quaternion.identity);
@@ -95,7 +102,9 @@ public class PlatformerController : StateController
         {
             suitOn = true;
             suit.SetActive(true);
-            Destroy(suitCurrent);
+            //NASTY NAST WAY OF SOLVING A BUG
+            suitCurrent.transform.position = new Vector3(-1000, -1000, 0);
+            Destroy(suitCurrent, 0.1f);
         }
     }
 
