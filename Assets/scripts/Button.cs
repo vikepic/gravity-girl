@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Button : MonoBehaviour {
     [SerializeField]
-    MoveUp targetWallScript;
+    MoveUp[] targetWallScript;
 	// Use this for initialization
 	void Start () {
 		
@@ -19,7 +19,10 @@ public class Button : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
-            targetWallScript.enabled = true;
+            for (int i = 0; i < targetWallScript.Length; i++)
+            {
+                targetWallScript[i].enabled = true;
+            }
             GetComponent<SpriteRenderer>().color = new Color(141.0f/255.0f, 1.0f, 105.0f / 255.0f);
         }
         GetComponent<Button>().enabled = false;
