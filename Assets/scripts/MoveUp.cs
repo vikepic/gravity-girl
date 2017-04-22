@@ -6,7 +6,9 @@ public class MoveUp : MonoBehaviour {
     [SerializeField]
     float distance = 1.0f;
     [SerializeField]
-    float smooth = 1.0f;
+    float smoothUp = 0.02f;
+    [SerializeField]
+    float smoothDown = 0.001f;
     public bool active = false;
     private float target, originalPos;
 	// Use this for initialization
@@ -18,11 +20,11 @@ public class MoveUp : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		if (transform.position.y != target && active){
-            transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x, target), smooth);
+            transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x, target), smoothUp);
         }
         else if (!active)
         {
-            transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x, originalPos), smooth);
+            transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x, originalPos), smoothDown);
         }
     }
 }
