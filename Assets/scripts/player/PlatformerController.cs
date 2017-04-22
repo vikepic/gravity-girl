@@ -13,13 +13,21 @@ public class PlatformerController : StateController
     [SerializeField]
     GameObject playerPlatformer;
 
-    private bool canJump = true;
-    public  bool faceRight = true;
-    private bool canDis = true;
-    private bool stairs = false;
-    private bool grounded = false;
-    private bool suitOn = true;
-    private bool suitInRange = false;
+    [HideInInspector]
+    public bool canJump = true;
+    [HideInInspector]
+    public bool faceRight = true;
+    [HideInInspector]
+    public bool canDis = true;
+    [HideInInspector]
+    public bool stairs = false;
+    [HideInInspector]
+    public bool grounded = false;
+    [HideInInspector]
+    public bool suitOn = true;
+    [HideInInspector]
+    public bool suitInRange = false;
+
     private GameObject suitCurrent;
 
     private void OnDisable()
@@ -34,10 +42,24 @@ public class PlatformerController : StateController
 
 	void Update () {
         grounded = checkGround();
-        if(!suitOn)myRb.velocity = new Vector2(Input.GetAxis("Horizontal")*speed, myRb.velocity.y);
-        else myRb.velocity = new Vector2(Input.GetAxis("Horizontal") * speed * suitMultiplier, myRb.velocity.y);
-        if (myRb.velocity.x > 0 && !faceRight) flip();
-        else if (myRb.velocity.x < 0 && faceRight) flip();
+        if (!suitOn)
+        {
+            myRb.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, myRb.velocity.y);
+        }
+        else
+        {
+            myRb.velocity = new Vector2(Input.GetAxis("Horizontal") * speed * suitMultiplier, myRb.velocity.y);
+        }
+
+        if (myRb.velocity.x > 0 && !faceRight)
+        {
+            flip();
+        }
+        else if (myRb.velocity.x < 0 && faceRight)
+        {
+            flip();
+        }
+
         if(Input.GetKeyDown(KeyCode.Space) && canJump)
         {
             canJump = false;
@@ -51,12 +73,12 @@ public class PlatformerController : StateController
             else myRb.AddForce(Vector2.up * jumpF * suitMultiplier, ForceMode2D.Impulse);
             StartCoroutine(enableJump());
         }
-        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W) && stairs)
+        if ( (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) && stairs)
         {
             if (!suitOn) myRb.velocity = new Vector2(0, stairSpeed);
             else myRb.velocity = new Vector2(0, stairSpeed*suitMultiplier);
         }
-        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S) && grounded && canDis)
+        if ( (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) && grounded && canDis)
         {
             stairCollider.SetActive(true);
             canDis = false;
@@ -94,32 +116,6 @@ public class PlatformerController : StateController
         yield return new WaitForSeconds(0.1f);
         stairCollider.SetActive(false);
         canDis = true;
-    }
-
-    void OnTriggerStay2D(Collider2D other)
-    {
-        if(other.tag == "stair")
-        {
-            stairs = true;
-        }
-    }
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "suit")
-        {
-            suitInRange = true;
-        }
-    }
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.tag == "stair")
-        {
-            stairs = false;
-        }
-        if (other.tag == "suit")
-        {
-            suitInRange = false;
-        }
     }
 
     private bool checkGround()

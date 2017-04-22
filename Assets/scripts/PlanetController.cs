@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PlanetController : MonoBehaviour {
 
+    [SerializeField]
+    GameObject entryPoint;
+    [SerializeField]
+    bool canBeEntered = false;
+
     PlanetPivotManager planetPivotManager;
     float planetRadius;
 
@@ -14,6 +19,14 @@ public class PlanetController : MonoBehaviour {
         get
         {
             return planetRadius;
+        }
+    }
+
+    public bool CanBeEntered
+    {
+        get
+        {
+            return canBeEntered;
         }
     }
 
@@ -50,5 +63,10 @@ public class PlanetController : MonoBehaviour {
         planetPivotManager.DeletePivot(entityPivot);
         // Delete the pair from the dict
         entityPivots.Remove(entity);
+    }
+
+    public Vector3 GetEntryLocation()
+    {
+        return entryPoint.transform.position;
     }
 }

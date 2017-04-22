@@ -40,10 +40,14 @@ public class InPlanetController : StateController
 
         if (Input.GetKey(KeyCode.K))
         {
-            // This gets us outside this state
-            gameObject.SendMessage("EnterPlanet");
-            pivotController.FreeEntity(gameObject);
-            return;
+            if (pivotController.CanPlanetBeEntered())
+            {
+                Vector3 enterPos = pivotController.GetPlanetEntryLocation();
+                // This gets us outside this state
+                gameObject.SendMessage("EnterPlanet", enterPos);
+                pivotController.FreeEntity(gameObject);
+                return;
+            }
         }
 
 

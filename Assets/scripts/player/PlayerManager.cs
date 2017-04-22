@@ -16,6 +16,8 @@ public class PlayerManager : MonoBehaviour {
     }
 
     [SerializeField]
+    private PlayerState startingState;
+
     private PlayerState currentState;
 
     // Every state controller should be assigned to its
@@ -75,10 +77,9 @@ public class PlayerManager : MonoBehaviour {
         ChangeState(PlayerState.Flying);
     }
 
-    public void EnterPlanet()
+    public void EnterPlanet(Vector3 entryPosition)
     {
-        //TODO position is hardcoded
-        transform.position = Vector3.zero;
+        transform.position = entryPosition;
         transform.rotation = Quaternion.identity;
         ChangeState(PlayerState.Platformer);
     }
@@ -92,6 +93,6 @@ public class PlayerManager : MonoBehaviour {
         stateControllers[(int)PlayerState.Platformer] =
             gameObject.GetComponent<PlatformerController>();
 
-        CurrentState = PlayerState.Flying;
+        CurrentState = startingState;
 	}
 }
