@@ -42,6 +42,8 @@ public class PlatformerController : StateController
     private void OnEnable()
     {
         playerPlatformer.SetActive(true);
+        suitOn = true;
+        faceRight = true;
     }
 
     void Awake()

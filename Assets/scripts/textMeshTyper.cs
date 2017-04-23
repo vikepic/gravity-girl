@@ -10,7 +10,7 @@ public class textMeshTyper : MonoBehaviour {
     string tCharacter;
     // Use this for initialization
     void Start () {
-        
+        tMesh.text = "";
     }
 	
     void OnTriggerEnter2D(Collider2D other)
