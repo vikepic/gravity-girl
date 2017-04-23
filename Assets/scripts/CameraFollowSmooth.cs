@@ -10,6 +10,7 @@ public class CameraFollowSmooth : MonoBehaviour {
 
     void Start()
     {
+        Cursor.visible = false;
         goSpace();
         pastCamPos = transform.position;
         pastTargetPos = target.transform.position;
