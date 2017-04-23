@@ -22,7 +22,7 @@ public class textMeshTyper : MonoBehaviour {
 	
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.GetComponent<Rigidbody2D>() && !active)
+        if (other.tag == "Player" && !active)
         {
             active = true;
             StartCoroutine(typeText());

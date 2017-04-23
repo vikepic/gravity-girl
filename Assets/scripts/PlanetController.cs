@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlanetController : MonoBehaviour {
 
     [SerializeField]
-    GameObject entryPoint;
+    GameObject entryPoint, exitPoint;
     [SerializeField]
     bool canBeEntered = false;
 
@@ -68,5 +68,10 @@ public class PlanetController : MonoBehaviour {
     public Vector3 GetEntryLocation()
     {
         return entryPoint.transform.position;
+    }
+
+    public Vector3 GetExitLocation()
+    {
+        return exitPoint.transform.position;
     }
 }

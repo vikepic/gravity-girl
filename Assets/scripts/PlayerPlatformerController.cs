@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerPlatformerController : MonoBehaviour {
 
     PlatformerController pc;
-
+    [SerializeField]
+    PlayerManager pm;
     void Update()
     {
         SyncPlayer();
@@ -39,6 +40,10 @@ public class PlayerPlatformerController : MonoBehaviour {
         if (other.tag == "suit")
         {
             pc.suitInRange = true;
+        }
+        if (other.tag == "teel") //aka teleporter...
+        {
+            //pm.ExitPlanet();
         }
     }
     void OnTriggerExit2D(Collider2D other)

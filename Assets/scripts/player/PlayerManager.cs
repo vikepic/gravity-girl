@@ -7,7 +7,7 @@ using UnityEngine;
 [RequireComponent(typeof(PlatformerController))]
 
 public class PlayerManager : MonoBehaviour {
-
+    public static int objectives = 0;
     public enum PlayerState
     {
         Flying,
@@ -74,6 +74,13 @@ public class PlayerManager : MonoBehaviour {
 
     public void ExitPlanet()
     {
+        ChangeState(PlayerState.Flying);
+    }
+
+    public void ExitLevel(Vector3 exitPos)
+    {
+        transform.position = exitPos;
+        transform.rotation = Quaternion.identity;
         ChangeState(PlayerState.Flying);
     }
 

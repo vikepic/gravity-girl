@@ -42,6 +42,7 @@ public class PlatformerController : StateController
 
 	void Update () {
         grounded = checkGround();
+        //Debug.Log(grounded);
         if (!suitOn)
         {
             myRb.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, myRb.velocity.y);
@@ -129,6 +130,12 @@ public class PlatformerController : StateController
 
     private bool checkGround()
     {
+        /*RaycastHit2D hit = Physics2D.Raycast(groundP.transform.position, Vector2.down, 0.01f);
+        bool hitBool = false;
+        if (hit.collider != null)
+        {
+            Debug.Log(hit.transform.tag);
+        }*/
         return Physics2D.Raycast(groundP.transform.position, Vector2.down, 0.01f);
     }
 }

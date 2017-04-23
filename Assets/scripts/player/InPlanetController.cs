@@ -6,6 +6,8 @@ public class InPlanetController : StateController
 {
     [SerializeField]
     float rotationSpeed = 3f;
+    [SerializeField]
+    Transform sprite;
 
     PivotController pivotController;
     // This state makes no sense if we do not have a valid
@@ -13,7 +15,7 @@ public class InPlanetController : StateController
     // if we have an assigned pivot. It is quite similar
     // to check wether pivot == null or not, but cleaner. 
     bool hasValidPivot = false;
-
+    public static bool faceRight = true;
 
 	void OnDisable () {
         hasValidPivot = false;
@@ -38,7 +40,7 @@ public class InPlanetController : StateController
             return;
         }
 
-        if (Input.GetKey(KeyCode.K))
+        if (Input.GetKey(KeyCode.P))
         {
             if (pivotController.CanPlanetBeEntered())
             {
@@ -46,6 +48,7 @@ public class InPlanetController : StateController
                 // This gets us outside this state
                 gameObject.SendMessage("EnterPlanet", enterPos);
                 pivotController.FreeEntity(gameObject);
+                CameraFollowSmooth.goIn();
                 return;
             }
         }
@@ -53,8 +56,29 @@ public class InPlanetController : StateController
 
         if (Input.GetAxis("Horizontal") != 0)
         {
-            pivotController.Rotate(rotationSpeed *
-                -Input.GetAxis("Horizontal"));
-        }        
-	}
+            pivotController.Rotate(rotationSpeed * -Input.GetAxis("Horizontal"));
+        }
+        if (Input.GetAxis("Horizontal") > 0 && !faceRight)
+        {
+            flip();
+        }
+        else if (Input.GetAxis("Horizontal") < 0 && faceRight)
+        {
+            flip();
+        }
+    }
+
+    public void enterLevel()
+    {
+        Vector3 enterPos = pivotController.GetPlanetEntryLocation();
+        // This gets us outside this state
+        gameObject.SendMessage("EnterPlanet", enterPos);
+        pivotController.FreeEntity(gameObject);
+    }
+
+    public void flip()
+    {
+        faceRight = !faceRight;
+        transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+    }
 }

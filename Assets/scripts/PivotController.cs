@@ -41,6 +41,11 @@ public class PivotController : MonoBehaviour {
         return planetController.GetEntryLocation();
     }
 
+    public Vector3 GetPlanetExitLocation()
+    {
+        return planetController.GetExitLocation();
+    }
+
     public bool CanPlanetBeEntered()
     {
         return planetController.CanBeEntered;
