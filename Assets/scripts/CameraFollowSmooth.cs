@@ -17,8 +17,10 @@ public class CameraFollowSmooth : MonoBehaviour {
     }
     void FixedUpdate()
     {
-        // transform.position = new Vector3(target.transform.position.x, transform.position.y, -10.0f);
+        //transform.position = new Vector3(target.transform.position.x, transform.position.y, -10.0f);
         transform.position = SmoothApproach(pastCamPos, pastTargetPos, target.transform.position, speed);
+        //transform.position = new Vector3(Mathf.Round(transform.position.x * 100f) / 100, Mathf.Round(transform.position.y * 100f) / 100, Mathf.Round(transform.position.z * 100f) / 100);
+        
         pastCamPos = transform.position;
         pastTargetPos = target.transform.position;
     }
@@ -34,8 +36,10 @@ public class CameraFollowSmooth : MonoBehaviour {
 
     public static void goSpace()
     {
+        
         speed = 10.0f;
         Camera.main.orthographicSize = 12.0f;
+        Camera.main.orthographicSize = (((float)Screen.height * .5f) / 0.125f) / 300.0f;
     }
 
     public static void goIn()

@@ -49,6 +49,7 @@ public class InPlanetController : StateController
                 gameObject.SendMessage("EnterPlanet", enterPos);
                 pivotController.FreeEntity(gameObject);
                 CameraFollowSmooth.goIn();
+                transform.localScale = new Vector3(1, 1, 1);
                 return;
             }
         }

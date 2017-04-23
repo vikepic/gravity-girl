@@ -6,11 +6,13 @@ public class Teleporter : MonoBehaviour {
     [SerializeField]
     bool isExterior;
     [SerializeField]
-    GameObject position;
+    GameObject position, renderer;
     [SerializeField]
     PlayerManager pm;
     [SerializeField]
     InPlanetController pc;
+    [SerializeField]
+    Sprite space;
 
     private Transform target;
 	// Use this for initialization
@@ -26,6 +28,7 @@ public class Teleporter : MonoBehaviour {
                 GameObject temp = other.transform.parent.gameObject; 
                 temp.transform.position = position.transform.position;
                 temp.transform.localScale = new Vector3(1,1,1);
+                renderer.GetComponent<SpriteRenderer>().sprite = space;
                 InPlanetController.faceRight = true;
                 CameraFollowSmooth.goSpace();
                 pm.ExitPlanet();

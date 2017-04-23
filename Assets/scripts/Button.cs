@@ -23,7 +23,7 @@ public class Button : MonoBehaviour {
             {
                 targetWallScript[i].active = true;
             }
-            GetComponent<SpriteRenderer>().color = new Color(141.0f/255.0f, 1.0f, 105.0f / 255.0f);
+            GetComponent<SpriteRenderer>().color = new Color(13.0f / 255.0f, 13.0f / 255.0f, 13.0f / 255.0f);
         }
     }
     void OnTriggerExit2D(Collider2D other)
@@ -34,7 +34,7 @@ public class Button : MonoBehaviour {
             {
                 targetWallScript[i].active = false;
             }
-            GetComponent<SpriteRenderer>().color = new Color(1.0f, 105.0f / 255.0f, 105.0f / 255.0f);
+            GetComponent<SpriteRenderer>().color = new Color(200.0f / 255.0f, 200.0f / 255.0f, 200.0f / 255.0f);
         }
     }
 }

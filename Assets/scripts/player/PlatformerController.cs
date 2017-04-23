@@ -12,6 +12,10 @@ public class PlatformerController : StateController
     GameObject groundP, stairCollider, suit, suitPref;
     [SerializeField]
     GameObject playerPlatformer;
+    [SerializeField]
+    SpriteRenderer renderer;
+    [SerializeField]
+    Sprite suitS, noSuitS;
 
     [HideInInspector]
     public bool canJump = true;
@@ -76,6 +80,7 @@ public class PlatformerController : StateController
         }
         if (!grounded && Input.GetKeyDown(KeyCode.W) && suitOn)
         {
+            renderer.sprite = noSuitS;
             myRb.AddForce(Vector2.up * jumpF * suitJumpMult, ForceMode2D.Impulse);
             StartCoroutine(enableJump());
             suitOn = false;
@@ -95,12 +100,14 @@ public class PlatformerController : StateController
         }
         if (Input.GetKeyDown(KeyCode.O) && suitOn)
         {
+            renderer.sprite = noSuitS;
             suitOn = false;
             suit.SetActive(false);
             suitCurrent = Instantiate(suitPref, transform.position, Quaternion.identity);
         }
         else if (Input.GetKeyDown(KeyCode.O) && !suitOn && suitInRange)
         {
+            renderer.sprite = suitS;
             suitOn = true;
             suit.SetActive(true);
             //NASTY NAST WAY OF SOLVING A BUG

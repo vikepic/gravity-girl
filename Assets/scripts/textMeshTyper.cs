@@ -24,10 +24,19 @@ public class textMeshTyper : MonoBehaviour {
     {
         if (other.tag == "Player" && !active)
         {
-            active = true;
+            active = false;
             StartCoroutine(typeText());
         }
     }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "Player" && !active)
+        {
+            tMesh.text = "";
+        }
+    }
+
 
     IEnumerator typeText()
     {
