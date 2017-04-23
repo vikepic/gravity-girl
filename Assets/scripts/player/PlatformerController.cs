@@ -44,7 +44,12 @@ public class PlatformerController : StateController
         playerPlatformer.SetActive(true);
     }
 
-	void Update () {
+    void Awake()
+    {
+        suitOn = true;
+    }
+
+    void Update () {
         grounded = checkGround();
         //Debug.Log(grounded);
         if (!suitOn)
