@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: dd588bc0911cca94c936599f355d912b
-timeCreated: 1492968062
+timeCreated: 1492980632
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -1322,9 +1322,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 40
-        y: 48
+        y: 32
         width: 8
-        height: 8
+        height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1335,9 +1335,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 48
+        y: 32
         width: 8
-        height: 8
+        height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1348,9 +1348,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 56
-        y: 48
+        y: 32
         width: 8
-        height: 8
+        height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1379,45 +1379,6 @@ TextureImporter:
         height: 8
       alignment: 1
       pivot: {x: 0, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ^06B744F119DD600CCEB9BC2D4436F98D04BFFF25E39A0534EE^pimgpsh_fullsize_distr_90
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 40
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ^06B744F119DD600CCEB9BC2D4436F98D04BFFF25E39A0534EE^pimgpsh_fullsize_distr_91
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 40
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ^06B744F119DD600CCEB9BC2D4436F98D04BFFF25E39A0534EE^pimgpsh_fullsize_distr_92
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 40
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -1478,45 +1439,6 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 32
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ^06B744F119DD600CCEB9BC2D4436F98D04BFFF25E39A0534EE^pimgpsh_fullsize_distr_98
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 32
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ^06B744F119DD600CCEB9BC2D4436F98D04BFFF25E39A0534EE^pimgpsh_fullsize_distr_99
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 32
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ^06B744F119DD600CCEB9BC2D4436F98D04BFFF25E39A0534EE^pimgpsh_fullsize_distr_100
-      rect:
-        serializedVersion: 2
-        x: 56
         y: 32
         width: 8
         height: 8

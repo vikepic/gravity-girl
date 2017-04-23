@@ -44,12 +44,13 @@ public class InPlanetController : StateController
         {
             if (pivotController.CanPlanetBeEntered())
             {
+                transform.localScale = new Vector3(1, 1, 1);
                 Vector3 enterPos = pivotController.GetPlanetEntryLocation();
                 // This gets us outside this state
                 gameObject.SendMessage("EnterPlanet", enterPos);
                 pivotController.FreeEntity(gameObject);
+                pivotController.SetNoEntry();
                 CameraFollowSmooth.goIn();
-                transform.localScale = new Vector3(1, 1, 1);
                 return;
             }
         }
@@ -79,7 +80,7 @@ public class InPlanetController : StateController
 
     public void flip()
     {
-        faceRight = !faceRight;
-        transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+        /*faceRight = !faceRight;
+        transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);*/
     }
 }

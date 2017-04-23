@@ -51,4 +51,9 @@ public class PivotController : MonoBehaviour {
         return planetController.CanBeEntered;
     }
 
+    public void SetNoEntry()
+    {
+        planetController.SetNoEntry();
+    }
+
 }

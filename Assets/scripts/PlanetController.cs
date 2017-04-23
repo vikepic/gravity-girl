@@ -74,4 +74,9 @@ public class PlanetController : MonoBehaviour {
     {
         return exitPoint.transform.position;
     }
+
+    public void SetNoEntry()
+    {
+        canBeEntered = false;
+    }
 }
