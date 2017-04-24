@@ -27,7 +27,7 @@ public class PreassurePlate : MonoBehaviour {
         //Debug.Log(other.tag);
         if (other.tag == "Player" || other.tag == "suit")
         {
-            if(elements == 0) AudioManager.Instance.PlaySound(AudioManager.SFX.PressurePlate);
+            if(elements == 0) AudioManager.Instance.PlaySound(AudioManager.SFX.PressurePlateON);
             ++elements;
         }
 
@@ -54,7 +54,8 @@ public class PreassurePlate : MonoBehaviour {
                 targetWallScript[i].active = false;
             }
             --elements;
-            if(elements == 0)GetComponent<SpriteRenderer>().sprite = off;
+            if (elements == 0) AudioManager.Instance.PlaySound(AudioManager.SFX.PressurePlateOFF);
+            if (elements == 0)GetComponent<SpriteRenderer>().sprite = off;
         }
     }
 }

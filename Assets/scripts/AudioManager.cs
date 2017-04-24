@@ -25,7 +25,8 @@ public class AudioManager : MonoBehaviour {
         Jump,
         JumpDouble,
         Land,
-        PressurePlate,
+        PressurePlateOFF,
+        PressurePlateON,
 
         SuitOn,
         SuitOff,

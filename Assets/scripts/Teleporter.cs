@@ -6,7 +6,7 @@ public class Teleporter : MonoBehaviour {
     [SerializeField]
     bool isExterior;
     [SerializeField]
-    GameObject position;
+    GameObject position, particles;
     [SerializeField]
     Sprite space;
 
@@ -33,6 +33,7 @@ public class Teleporter : MonoBehaviour {
                 PlayerManager.Instance.ExitPlanet();
                 GameObject tempPm = GameObject.Find("Player");
                 tempPm.GetComponent<PlayerManager>().objectiveCompleted();
+                Destroy(particles);
             }
             else
             {
