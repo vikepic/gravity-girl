@@ -102,4 +102,17 @@ public class PlayerManager : MonoBehaviour {
 
         CurrentState = startingState;
 	}
+
+    private static PlayerManager _instance;
+    public static PlayerManager Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = (PlayerManager)FindObjectOfType(typeof(PlayerManager));
+            }
+            return _instance;
+        }
+    }
 }

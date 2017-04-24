@@ -172,4 +172,19 @@ public class PlatformerController : StateController
         }*/
         return Physics2D.Raycast(groundP.transform.position, Vector2.down, 0.01f);
     }
+
+    private static PlatformerController _instance;
+    public static PlatformerController Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = (PlatformerController)FindObjectOfType(typeof(PlatformerController));
+            }
+            return _instance;
+        }
+    }
+
 }
+

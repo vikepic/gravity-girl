@@ -6,8 +6,6 @@ public class InPlanetController : StateController
 {
     [SerializeField]
     float rotationSpeed = 3f;
-    [SerializeField]
-    Transform sprite;
 
     PivotController pivotController;
     // This state makes no sense if we do not have a valid
@@ -82,5 +80,18 @@ public class InPlanetController : StateController
     {
         faceRight = !faceRight;
         transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+    }
+
+    private static InPlanetController _instance;
+    public static InPlanetController Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = (InPlanetController)FindObjectOfType(typeof(InPlanetController));
+            }
+            return _instance;
+        }
     }
 }

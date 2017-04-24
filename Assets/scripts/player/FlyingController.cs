@@ -105,4 +105,17 @@ public class FlyingController : StateController {
         if(force.sqrMagnitude > 0)
             playerGravityObjectController.AddForce(force);
     }
+
+    private static InPlanetController _instance;
+    public static InPlanetController Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = (InPlanetController)FindObjectOfType(typeof(InPlanetController));
+            }
+            return _instance;
+        }
+    }
 }
