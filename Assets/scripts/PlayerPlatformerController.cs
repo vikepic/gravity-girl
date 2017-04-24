@@ -5,8 +5,7 @@ using UnityEngine;
 public class PlayerPlatformerController : MonoBehaviour {
 
     PlatformerController pc;
-    [SerializeField]
-    PlayerManager pm;
+
     void Update()
     {
         SyncPlayer();
@@ -25,7 +24,7 @@ public class PlayerPlatformerController : MonoBehaviour {
 
     private void Awake()
     {
-        pc = transform.parent.GetComponent<PlatformerController>();
+        pc = PlatformerController.Instance;
     }
 
     void OnTriggerStay2D(Collider2D other)
