@@ -127,7 +127,6 @@ public class PlayerManager : MonoBehaviour {
         objectives++;
         // Ending music
         AudioManager.Instance.SetState(2);
-        Debug.Log(objectives);
         if (objectives == 4)
         {
             AudioManager.Instance.PlayVictoryMusic();

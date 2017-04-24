@@ -139,7 +139,7 @@ public class AudioManager : MonoBehaviour {
         {
             playingEndMusic = true;
             float len = sources[(int)SFX.EnumSize + currentTrack + currentState].clip.length;
-            Invoke("NextTrackAfterEndMusic", len);
+            Invoke("NextTrackAfterEndMusic", len - 2.5f);
         }
     }
 
