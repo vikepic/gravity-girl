@@ -21,6 +21,15 @@ public class PreassurePlate : MonoBehaviour {
 
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        //Debug.Log(other.tag);
+        if (other.tag == "Player" || other.tag == "suit")
+        {
+            AudioManager.Instance.PlaySound(AudioManager.SFX.PressurePlate);
+        }
+    }
+
     void OnTriggerStay2D(Collider2D other)
     {
         //Debug.Log(other.tag);

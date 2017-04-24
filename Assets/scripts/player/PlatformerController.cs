@@ -48,7 +48,7 @@ public class PlatformerController : StateController
     [HideInInspector]
     public bool grounded = false;
     [HideInInspector]
-    public bool suitOn = true;
+    private bool suitOn = true;
     [HideInInspector]
     public bool suitInRange = false;
 
@@ -62,19 +62,19 @@ public class PlatformerController : StateController
     private void OnEnable()
     {
         playerPlatformer.SetActive(true);
-        suitOn = true;
+        SuitOn = true;
         faceRight = true;
     }
 
     void Awake()
     {
-        suitOn = true;
+        SuitOn = true;
     }
 
     void Update () {
         grounded = checkGround();
         //Debug.Log(grounded);
-        if (!suitOn)
+        if (!SuitOn)
         {
             myRb.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, myRb.velocity.y);
         }
@@ -92,32 +92,40 @@ public class PlatformerController : StateController
             flip();
         }
 
-        if(Input.GetKeyDown(KeyCode.Space) && canJump)
-        {
-            canJump = false;
-            myRb.AddForce(Vector2.up * jumpF, ForceMode2D.Impulse);
-            StartCoroutine(enableJump());
-        }
+        //if(Input.GetKeyDown(KeyCode.Space) && canJump)
+        //{
+        //    canJump = false;
+        //    myRb.AddForce(Vector2.up * jumpF, ForceMode2D.Impulse);
+        //    StartCoroutine(enableJump());
+        //}
+
         if (grounded && Input.GetKeyDown(KeyCode.W) && canJump)
         {
             canJump = false;
-            if(!suitOn)myRb.AddForce(Vector2.up * jumpF, ForceMode2D.Impulse);
+            if(!SuitOn)myRb.AddForce(Vector2.up * jumpF, ForceMode2D.Impulse);
             else myRb.AddForce(Vector2.up * jumpF * suitMultiplier, ForceMode2D.Impulse);
             StartCoroutine(enableJump());
+            AudioManager.Instance.PlaySound(AudioManager.SFX.Jump);
         }
-        if (!grounded && Input.GetKeyDown(KeyCode.W) && suitOn)
+        if (!grounded && Input.GetKeyDown(KeyCode.W) && SuitOn)
         {
             spriteRenderer.sprite = noSuitS;
             myRb.AddForce(Vector2.up * jumpF * suitJumpMult, ForceMode2D.Impulse);
             StartCoroutine(enableJump());
-            suitOn = false;
+            SuitOn = false;
             suit.SetActive(false);
             suitCurrent = Instantiate(suitPref, transform.position, Quaternion.identity);
+            AudioManager.Instance.PlaySound(AudioManager.SFX.JumpDouble);
         }
         if ( (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) && stairs)
         {
-            if (!suitOn) myRb.velocity = new Vector2(0, stairSpeed);
+            if (!SuitOn) myRb.velocity = new Vector2(0, stairSpeed);
             else myRb.velocity = new Vector2(0, stairSpeed*suitMultiplier);
+            AudioManager.Instance.PlaySoundIfNotPlaying(AudioManager.SFX.Climb);
+        }
+        else
+        {
+            AudioManager.Instance.StopSound(AudioManager.SFX.Climb);
         }
         if ( (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) && grounded && canDis)
         {
@@ -125,19 +133,22 @@ public class PlatformerController : StateController
             canDis = false;
             StartCoroutine(disableStairCol());
         }
-        if (Input.GetKeyDown(KeyCode.O) && suitOn)
+        if (Input.GetKeyDown(KeyCode.O) && SuitOn)
         {
             spriteRenderer.sprite = noSuitS;
-            suitOn = false;
+            SuitOn = false;
             suit.SetActive(false);
             suitCurrent = Instantiate(suitPref, transform.position, Quaternion.identity);
         }
-        else if (Input.GetKeyDown(KeyCode.O) && !suitOn && suitInRange)
+        else if (Input.GetKeyDown(KeyCode.O) && !SuitOn && suitInRange)
         {
             spriteRenderer.sprite = suitS;
-            suitOn = true;
+            SuitOn = true;
             suit.SetActive(true);
             //NASTY NAST WAY OF SOLVING A BUG
+            
+            // wow dude
+            // - @wextia
             suitCurrent.transform.position = new Vector3(-1000, -1000, 0);
             Destroy(suitCurrent, 0.1f);
         }
@@ -170,7 +181,12 @@ public class PlatformerController : StateController
         {
             Debug.Log(hit.transform.tag);
         }*/
-        return Physics2D.Raycast(groundP.transform.position, Vector2.down, 0.01f);
+        bool ret = Physics2D.Raycast(groundP.transform.position, Vector2.down, 0.01f);
+        if(!grounded && ret)
+        {
+            AudioManager.Instance.PlaySound(AudioManager.SFX.Land);
+        }
+        return ret;
     }
 
     private static PlatformerController _instance;
@@ -186,5 +202,32 @@ public class PlatformerController : StateController
         }
     }
 
+    private bool SuitOn
+    {
+        get
+        {
+            return suitOn;
+        }
+
+        set
+        {
+            // Getting unsuited
+            if(suitOn && !value)
+            {
+                //AudioManager.Instance.SwitchMusic(AudioManager.Music.Track1,
+                //    AudioManager.Music.Track1NES);
+                AudioManager.Instance.PlayMusic(AudioManager.Music.Track1NES);
+            }
+            // Getting suited
+            else if (!suitOn && value)
+            {
+                //AudioManager.Instance.SwitchMusic(AudioManager.Music.Track1NES,
+                //    AudioManager.Music.Track1);
+                AudioManager.Instance.PlayMusic(AudioManager.Music.Track1);
+            }
+
+            suitOn = value;
+        }
+    }
 }
 

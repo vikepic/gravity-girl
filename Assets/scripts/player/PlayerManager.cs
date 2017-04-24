@@ -40,10 +40,13 @@ public class PlayerManager : MonoBehaviour {
         switch (newState)
         {
             case PlayerState.Flying:
+                AudioManager.Instance.PlayMusic(AudioManager.Music.Track1);
                 break;
             case PlayerState.InPlanet:
+                AudioManager.Instance.PlayMusic(AudioManager.Music.Track1);
                 break;
             case PlayerState.Platformer:
+                AudioManager.Instance.PlayMusic(AudioManager.Music.Track1);
                 break;
             default:
                 break;

@@ -14,11 +14,7 @@ public class FlyingController : StateController {
     [SerializeField]
     float jetpackAngle = 45f;
     [SerializeField]
-    float jetpackForce = 100f;
-    [SerializeField]
     float initialJetpackImpulse = 400f;
-    [SerializeField]
-    float steeringForce = 5;
 
     // This is true each time we disable the component
     bool firstActivation = true;
@@ -49,6 +45,7 @@ public class FlyingController : StateController {
         {
             playerGravityObject.SetActive(false);
         }
+        AudioManager.Instance.PlaySound(AudioManager.SFX.LandSpace);
     }
 
     void Start()
@@ -71,10 +68,10 @@ public class FlyingController : StateController {
                 verForce *= initialJetpackImpulse;
                 firstActivation = false;
             }
-            else
-            {
-                verForce *= jetpackForce;
-            }
+            //else
+            //{
+            //    verForce *= jetpackForce;
+            //}
 
             // I rotate the force angle now
             verForce = 
@@ -85,20 +82,20 @@ public class FlyingController : StateController {
             force += verForce;
         }
 
-        if (Input.GetAxis("Horizontal") != 0)
-        {
-            float rotAngle = 90 * -Input.GetAxis("Horizontal");
+        //if (Input.GetAxis("Horizontal") != 0)
+        //{
+        //    float rotAngle = 90 * -Input.GetAxis("Horizontal");
 
-            Vector2 horForce = new Vector2(1,1);
-            horForce *= steeringForce;
+        //    Vector2 horForce = new Vector2(1,1);
+        //    horForce *= steeringForce;
 
-            // TODO angle is hardcoded
-            horForce = transform.rotation *
-                Quaternion.Euler(new Vector3(0, 0, rotAngle)) * 
-                    horForce;
+        //    // TODO angle is hardcoded
+        //    horForce = transform.rotation *
+        //        Quaternion.Euler(new Vector3(0, 0, rotAngle)) * 
+        //            horForce;
 
-            force += horForce;
-        }
+        //    force += horForce;
+        //}
 
         //Debug.Log("FlyingController adding force to player: " + 
         //    force);

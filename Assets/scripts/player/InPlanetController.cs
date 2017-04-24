@@ -35,6 +35,7 @@ public class InPlanetController : StateController
             // This gets us outside this state
             gameObject.SendMessage("ExitPlanet");
             pivotController.FreeEntity(gameObject);
+            AudioManager.Instance.PlaySound(AudioManager.SFX.JumpSpace);
             return;
         }
 
