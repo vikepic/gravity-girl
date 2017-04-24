@@ -155,6 +155,10 @@ public class AudioManager : MonoBehaviour {
         {
             currentTrack += 3;
         }
+        else if(currentTrack != 9)
+        {
+            currentTrack = 0;
+        }
         ResetMusics();
         PlayMusic();
     }
