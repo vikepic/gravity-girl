@@ -1,15 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class textMeshTyper : MonoBehaviour {
-    [SerializeField]
-    TextMeshPro tMesh;
-    [SerializeField]
+    TextMesh tMesh;
     string tCharacter;
     // Use this for initialization
     void Start () {
+        tMesh = GetComponent<TextMesh>();
+        tCharacter = tMesh.text;
         tMesh.text = "";
     }
 	
