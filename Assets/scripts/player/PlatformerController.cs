@@ -216,14 +216,16 @@ public class PlatformerController : StateController
             {
                 //AudioManager.Instance.SwitchMusic(AudioManager.Music.Track1,
                 //    AudioManager.Music.Track1NES);
-                AudioManager.Instance.PlayMusic(AudioManager.Music.Track1NES);
+                AudioManager.Instance.SetState(1);
+                AudioManager.Instance.PlaySound(AudioManager.SFX.SuitOff);
             }
             // Getting suited
             else if (!suitOn && value)
             {
                 //AudioManager.Instance.SwitchMusic(AudioManager.Music.Track1NES,
                 //    AudioManager.Music.Track1);
-                AudioManager.Instance.PlayMusic(AudioManager.Music.Track1);
+                AudioManager.Instance.SetState(0);
+                AudioManager.Instance.PlaySound(AudioManager.SFX.SuitOn);
             }
 
             suitOn = value;

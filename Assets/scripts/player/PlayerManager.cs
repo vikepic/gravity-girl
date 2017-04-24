@@ -41,13 +41,13 @@ public class PlayerManager : MonoBehaviour {
         switch (newState)
         {
             case PlayerState.Flying:
-                AudioManager.Instance.PlayMusic(AudioManager.Music.Track1);
+                AudioManager.Instance.SetState(0);
                 break;
             case PlayerState.InPlanet:
-                AudioManager.Instance.PlayMusic(AudioManager.Music.Track1);
+                AudioManager.Instance.SetState(0);
                 break;
             case PlayerState.Platformer:
-                AudioManager.Instance.PlayMusic(AudioManager.Music.Track1);
+                AudioManager.Instance.SetState(0);
                 break;
             default:
                 break;
@@ -125,8 +125,11 @@ public class PlayerManager : MonoBehaviour {
     public void objectiveCompleted()
     {
         objectives++;
-        if(objectives == 4)
+        // Ending music
+        AudioManager.Instance.SetState(2);
+        if (objectives == 4)
         {
+            AudioManager.Instance.PlayVictoryMusic();
              textGo.SetActive(true);
         }
     }

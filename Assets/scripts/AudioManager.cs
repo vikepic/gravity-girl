@@ -5,8 +5,16 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour {
 
     AudioClip[] sounds;
+    [SerializeField]
     AudioClip[] musics;
+    int currentTrack = 0;
+    // 0 -> On suit
+    // 1 -> Off suit
+    // 2 -> End
+    int currentState = 0;
+    bool playingEndMusic = false;
 
+    [SerializeField]
     AudioSource[] sources;
 
     public enum SFX
@@ -19,6 +27,9 @@ public class AudioManager : MonoBehaviour {
         Land,
         PressurePlate,
 
+        SuitOn,
+        SuitOff,
+
         JumpSpace,
         LandSpace,
 
@@ -27,9 +38,22 @@ public class AudioManager : MonoBehaviour {
 
     public enum Music
     {
-        Track1,
+        Track1Loop,
+        Track1NESLoop,
 
-        Track1NES,
+        Track1End,
+
+        Track2Loop,
+        Track2NESLoop,
+
+        Track2End,
+
+        Track3Loop,
+        Track3NESLoop,
+
+        Track3End,
+
+        EpicIntro,
 
         EnumSize
     }
@@ -55,18 +79,27 @@ public class AudioManager : MonoBehaviour {
         }
 
         musics = new AudioClip[(int)Music.EnumSize];
-
         for (int i = 0; i < (int)Music.EnumSize; i++)
         {
             Music mus = (Music)i;
             musics[i] = (AudioClip)Resources.Load("music/" + mus.ToString());
             sources[sourcesIndex].clip = musics[i];
             sources[sourcesIndex].loop = true;
-            sources[sourcesIndex].volume = 0;
-            sources[sourcesIndex].Play();
             ++sourcesIndex;
         }
 
+        ResetMusics();
+    }
+
+
+
+    void ResetMusics()
+    {
+        for (int i = (int)SFX.EnumSize; i < sources.Length; i++)
+        {
+            sources[i].Play();
+            sources[i].volume = 0;
+        }
     }
 
     public void PlaySoundIfNotPlaying(SFX sound)
@@ -86,10 +119,55 @@ public class AudioManager : MonoBehaviour {
             sources[(int)sound].Stop();
     }
 
-    public void PlayMusic(Music music)
+    public void SetState(int state)
+    {
+        currentState = state;
+
+        // in order to protect us from switching musics if in ending mode
+        if (!playingEndMusic)
+        {
+            if (currentState == 2)
+            {
+                ResetMusics();
+            }
+            PlayMusic();
+        }
+
+        // Special behaviour for ending music
+        if(currentState == 2)
+        {
+            playingEndMusic = true;
+            float len = sources[(int)SFX.EnumSize + currentTrack + currentState].clip.length;
+            Invoke("NextTrackAfterEndMusic", len);
+        }
+    }
+
+    void NextTrackAfterEndMusic()
+    {
+        playingEndMusic = false;
+        NextTrack();
+    }
+
+    void NextTrack()
+    {
+        if (currentTrack < 5)
+        {
+            currentTrack += 3;
+        }
+        ResetMusics();
+        PlayMusic();
+    }
+
+    public void PlayVictoryMusic()
+    {
+        currentState = 0;
+        currentTrack = 9;
+    }
+
+    void PlayMusic()
     {
         StopAllMusic();
-        sources[(int)SFX.EnumSize + (int)music].volume = 1;
+        sources[(int)SFX.EnumSize + currentTrack + currentState].volume = 1;
     }
 
     public void StopAllMusic()
