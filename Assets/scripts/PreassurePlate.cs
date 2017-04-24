@@ -9,6 +9,7 @@ public class PreassurePlate : MonoBehaviour {
     Sprite on;
     [SerializeField]
     Sprite off;
+    int elements = 0;
     // Use this for initialization
     void Start()
     {
@@ -26,8 +27,10 @@ public class PreassurePlate : MonoBehaviour {
         //Debug.Log(other.tag);
         if (other.tag == "Player" || other.tag == "suit")
         {
-            AudioManager.Instance.PlaySound(AudioManager.SFX.PressurePlate);
+            if(elements == 0) AudioManager.Instance.PlaySound(AudioManager.SFX.PressurePlate);
+            ++elements;
         }
+
     }
 
     void OnTriggerStay2D(Collider2D other)
@@ -50,7 +53,8 @@ public class PreassurePlate : MonoBehaviour {
             {
                 targetWallScript[i].active = false;
             }
-            GetComponent<SpriteRenderer>().sprite = off;
+            --elements;
+            if(elements == 0)GetComponent<SpriteRenderer>().sprite = off;
         }
     }
 }
