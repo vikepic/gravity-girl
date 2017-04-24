@@ -8,6 +8,7 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour {
     public static int objectives = 0;
+    private GameObject textGo;
     public enum PlayerState
     {
         Flying,
@@ -104,6 +105,8 @@ public class PlayerManager : MonoBehaviour {
             gameObject.GetComponent<PlatformerController>();
 
         CurrentState = startingState;
+        textGo = GameObject.Find("winGameObj");
+        textGo.SetActive(false);
 	}
 
     private static PlayerManager _instance;
@@ -116,6 +119,15 @@ public class PlayerManager : MonoBehaviour {
                 _instance = (PlayerManager)FindObjectOfType(typeof(PlayerManager));
             }
             return _instance;
+        }
+    }
+
+    public void objectiveCompleted()
+    {
+        objectives++;
+        if(objectives == 4)
+        {
+             textGo.SetActive(true);
         }
     }
 }

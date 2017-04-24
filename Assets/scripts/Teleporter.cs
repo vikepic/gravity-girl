@@ -31,6 +31,8 @@ public class Teleporter : MonoBehaviour {
                 InPlanetController.faceRight = true;
                 CameraFollowSmooth.goSpace();
                 PlayerManager.Instance.ExitPlanet();
+                GameObject tempPm = GameObject.Find("Player");
+                tempPm.GetComponent<PlayerManager>().objectiveCompleted();
             }
             else
             {
