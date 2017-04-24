@@ -44,7 +44,7 @@ public class Gravity2D : MonoBehaviour {
                 if (!objectsInRange.Contains(c.GetComponent<Rigidbody2D>()))
                 {
                     objectsInRange.Add(c.GetComponent<Rigidbody2D>());
-                    Debug.Log("Gravity2D: object " + c.gameObject.name + "entered the radius");
+                    //Debug.Log("Gravity2D: object " + c.gameObject.name + "entered the radius");
                 }
 			}
 			else

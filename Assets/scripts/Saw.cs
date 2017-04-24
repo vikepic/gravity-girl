@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Saw : MonoBehaviour {
     [SerializeField]
-    Transform s1, s2;
+    Transform s1;
+    [SerializeField]
+    Transform s2;
     [SerializeField]
     float smooth;
     [SerializeField]

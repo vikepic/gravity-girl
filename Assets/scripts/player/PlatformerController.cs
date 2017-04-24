@@ -5,17 +5,37 @@ using UnityEngine;
 public class PlatformerController : StateController
 {
     [SerializeField]
-    float speed, jumpF, stairSpeed, suitMultiplier, suitJumpMult;
+    float speed;
+    [SerializeField]
+    float jumpF;
+    [SerializeField]
+    float stairSpeed;
+    [SerializeField]
+    float suitMultiplier;
+    [SerializeField]
+    float suitJumpMult;
+
     [SerializeField]
     Rigidbody2D myRb;
+
     [SerializeField]
-    GameObject groundP, stairCollider, suit, suitPref;
+    GameObject groundP;
+    [SerializeField]
+    GameObject stairCollider;
+    [SerializeField]
+    GameObject suit;
+    [SerializeField]
+    GameObject suitPref;
+
     [SerializeField]
     GameObject playerPlatformer;
     [SerializeField]
-    SpriteRenderer renderer;
+    SpriteRenderer spriteRenderer;
+
     [SerializeField]
-    Sprite suitS, noSuitS;
+    Sprite suitS;
+    [SerializeField]
+    Sprite noSuitS;
 
     [HideInInspector]
     public bool canJump = true;
@@ -87,7 +107,7 @@ public class PlatformerController : StateController
         }
         if (!grounded && Input.GetKeyDown(KeyCode.W) && suitOn)
         {
-            renderer.sprite = noSuitS;
+            spriteRenderer.sprite = noSuitS;
             myRb.AddForce(Vector2.up * jumpF * suitJumpMult, ForceMode2D.Impulse);
             StartCoroutine(enableJump());
             suitOn = false;
@@ -107,14 +127,14 @@ public class PlatformerController : StateController
         }
         if (Input.GetKeyDown(KeyCode.O) && suitOn)
         {
-            renderer.sprite = noSuitS;
+            spriteRenderer.sprite = noSuitS;
             suitOn = false;
             suit.SetActive(false);
             suitCurrent = Instantiate(suitPref, transform.position, Quaternion.identity);
         }
         else if (Input.GetKeyDown(KeyCode.O) && !suitOn && suitInRange)
         {
-            renderer.sprite = suitS;
+            spriteRenderer.sprite = suitS;
             suitOn = true;
             suit.SetActive(true);
             //NASTY NAST WAY OF SOLVING A BUG

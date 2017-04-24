@@ -6,7 +6,7 @@ public class Teleporter : MonoBehaviour {
     [SerializeField]
     bool isExterior;
     [SerializeField]
-    GameObject position, renderer;
+    GameObject position, _renderer;
     [SerializeField]
     PlayerManager pm;
     [SerializeField]
@@ -14,11 +14,14 @@ public class Teleporter : MonoBehaviour {
     [SerializeField]
     Sprite space;
 
-    private Transform target;
-	// Use this for initialization
-	void Start () {
-        target = position.transform;
-    }
+    // Geri, please erase this commented code
+    // if target is not being used
+    //   private Transform target;
+	//// Use this for initialization
+	//void Start () {
+    //       target = position.transform;
+    //   }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
@@ -28,7 +31,7 @@ public class Teleporter : MonoBehaviour {
                 GameObject temp = other.transform.parent.gameObject; 
                 temp.transform.position = position.transform.position;
                 temp.transform.localScale = new Vector3(1,1,1);
-                renderer.GetComponent<SpriteRenderer>().sprite = space;
+                _renderer.GetComponent<SpriteRenderer>().sprite = space;
                 InPlanetController.faceRight = true;
                 CameraFollowSmooth.goSpace();
                 pm.ExitPlanet();

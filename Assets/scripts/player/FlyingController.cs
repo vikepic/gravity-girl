@@ -18,8 +18,6 @@ public class FlyingController : StateController {
     [SerializeField]
     float initialJetpackImpulse = 400f;
     [SerializeField]
-    float jumpAngle = 45f;
-    [SerializeField]
     float steeringForce = 5;
 
     // This is true each time we disable the component

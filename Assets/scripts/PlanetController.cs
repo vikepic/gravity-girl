@@ -5,7 +5,9 @@ using UnityEngine;
 public class PlanetController : MonoBehaviour {
 
     [SerializeField]
-    GameObject entryPoint, exitPoint;
+    GameObject entryPoint;
+    [SerializeField]
+    GameObject exitPoint;
     [SerializeField]
     bool canBeEntered = false;
 
