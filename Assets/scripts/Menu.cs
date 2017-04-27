@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Menu : MonoBehaviour {
-
+    [SerializeField]
+    GameObject loading;
 	// Use this for initialization
 	void Start () {
         Cursor.visible = false;
@@ -11,7 +12,10 @@ public class Menu : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.anyKey) Application.LoadLevel("gameplay");
-
+        if (Input.anyKey)
+        {
+            Application.LoadLevel("gameplay");
+            loading.SetActive(true);
+        }
     }
 }
